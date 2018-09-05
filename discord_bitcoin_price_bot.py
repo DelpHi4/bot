@@ -4,6 +4,7 @@ import requests
 from discord import Game
 from discord.ext.commands import Bot
 import aiohttp
+import json
 BOT_PREFIX = ("?", "!")
 TOKEN = "NDg2NTM4MjcyNzI2NTgxMjQ4.DnFvsw.BZMxB01L-W0T7-448CndgSCOSww"
 
