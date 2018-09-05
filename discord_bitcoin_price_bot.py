@@ -61,11 +61,14 @@ async def ripple():
     await client.say("Ripples symbol is: " + sym)
     
 
+@client.command()
 async def litecoin():
     url = 'https://api.coinmarketcap.com/v1/ticker/litecoin/'
-    response = requests.get(url)
-    value = response.json()[0]["price_usd"]
-    await client.say("Litecoin price is: $" + value)
+    async with aiohttp.ClientSession() as session:  # Async HTTP request
+        raw_response = await session.get(url)
+        response = await raw_response.text()
+        response = json.loads(response)
+        await client.say("Цена Лайта: $" + response['bpi']['USD']['rate'])
     
 
 async def neo():
