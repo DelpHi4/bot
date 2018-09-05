@@ -137,4 +137,4 @@ async def salus():
 
 
 
-client.run("NDg1NTAzMzQ5NTE3NzEzNDE4.Dm0jJw.RjBFbnkIQEcPE-zpP6EHTyquzoQ")
+client.run("NDg2NTM4MjcyNzI2NTgxMjQ4.DnFcjA.cAywcXhjY35Ps1Xn3vQyoJ8skPo")
