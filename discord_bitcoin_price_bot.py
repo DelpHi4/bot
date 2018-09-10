@@ -34,7 +34,7 @@ async def eight_ball(context):
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
     
     
-@bot.command()
+@client.command()
 async def info(ctx):
     embed = discord.Embed(title="Хейтер Витали", description="Топ бот ин зе ворлд", color=0xeee657)
     
