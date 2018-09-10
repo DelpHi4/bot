@@ -32,8 +32,12 @@ async def eight_ball(context):
         'Определённо да',
     ]
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
+    
         
-
+@client.command()
+async def квадрат(number):
+    squared_value = int(number) * int(number)
+    await client.say(str(number) + " В квадрате " + str(squared_value))
 
 
 client.run("NDg1NTAzMzQ5NTE3NzEzNDE4.Dm0jJw.RjBFbnkIQEcPE-zpP6EHTyquzoQ")
