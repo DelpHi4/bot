@@ -21,7 +21,7 @@ async def bitcoin():
 @client.command(name='Шар',
                 description="Answers a yes/no question.",
                 brief="Answers from the beyond.",
-                aliases=['Шарик', '8Шарик', '8шар'],
+                aliases=['Шарик', '8Шарик', '8Шар'],
                 pass_context=True)
 async def eight_ball(context):
     possible_responses = [
