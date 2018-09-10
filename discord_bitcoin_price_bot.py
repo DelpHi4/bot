@@ -18,18 +18,18 @@ async def bitcoin():
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate'])
         
-@client.command(name='8ball',
+@client.command(name='Шар',
                 description="Answers a yes/no question.",
                 brief="Answers from the beyond.",
-                aliases=['eight_ball', 'eightball', '8-ball'],
+                aliases=['Шарик', '8Шарик', '8шар'],
                 pass_context=True)
 async def eight_ball(context):
     possible_responses = [
-        'That is a resounding no',
-        'It is not looking likely',
-        'Too hard to tell',
-        'It is quite possible',
-        'Definitely',
+        'Определённо нет',
+        'Вероятно, нет',
+        'Сложно сказать',
+        'Возможно',
+        'Определённо да',
     ]
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
         
