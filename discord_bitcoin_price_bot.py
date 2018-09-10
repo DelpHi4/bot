@@ -10,9 +10,6 @@ BOT_PREFIX = ("?", "!")
 client = Bot(command_prefix=BOT_PREFIX)
 bot = commands.Bot(command_prefix='?')
 
-@client.command()
-async def test(ctx):
-    pass
 
 @client.command()
 async def bitcoin():
@@ -40,7 +37,7 @@ async def eight_ball(context):
     
     
 @client.command()
-async def info(ctx):
+async def info(context):
     embed = discord.Embed(title="Хейтер Витали", description="Топ бот ин зе ворлд", color=0xeee657)
     
     # give info about you here
