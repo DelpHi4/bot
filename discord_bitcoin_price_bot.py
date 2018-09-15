@@ -1,3 +1,5 @@
+
+
 import random
 import asyncio
 import aiohttp
@@ -8,8 +10,7 @@ from discord.ext.commands import Bot
 BOT_PREFIX = ("?", "!")
 
 client = Bot(command_prefix=BOT_PREFIX)
-bot = commands.Bot(command_prefix='?')
-
+bot = commands.Bot(command_prefix='?', '!')
 
 @client.command()
 async def bitcoin():
@@ -37,7 +38,7 @@ async def eight_ball(context):
     
     
 @client.command()
-async def info(context):
+async def info(ctx):
     embed = discord.Embed(title="Хейтер Витали", description="Топ бот ин зе ворлд", color=0xeee657)
     
     # give info about you here
@@ -58,3 +59,4 @@ async def квадрат(number):
 
 
 client.run("NDg1NTAzMzQ5NTE3NzEzNDE4.Dm0jJw.RjBFbnkIQEcPE-zpP6EHTyquzoQ")
+
