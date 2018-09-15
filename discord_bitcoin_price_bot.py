@@ -1,5 +1,3 @@
-
-
 import random
 import asyncio
 import aiohttp
@@ -37,25 +35,12 @@ async def eight_ball(context):
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
     
     
-@client.command()
-async def info(ctx):
-    embed = discord.Embed(title="Хейтер Витали", description="Топ бот ин зе ворлд", color=0xeee657)
-    
-    # give info about you here
-    embed.add_field(name="Author", value="<DelphinG3>")
-    
-    # Shows the number of servers the bot is member of.
-    embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
-
-    # give users a link to invite thsi bot to their server
-    embed.add_field(name="Invite", value="[Invite link](<https://discordapp.com/oauth2/authorize?client_id=485503349517713418&scope=bot&permissions=2146958847>)")
-
-    await ctx.send(embed=embed)
     
 @client.command()
-async def квадрат(number):
+async def square(number):
     squared_value = int(number) * int(number)
-    await client.say(str(number) + " В квадрате " + str(squared_value))
+    await client.say(str(number) + " squared is " + str(squared_value))
+
 
 
 client.run("NDg1NTAzMzQ5NTE3NzEzNDE4.Dm0jJw.RjBFbnkIQEcPE-zpP6EHTyquzoQ")
